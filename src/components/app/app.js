@@ -29,6 +29,13 @@ class App extends Component{
   }
 
   addItem = (name, salary) => {
+    if (name.length < 3){
+      return;
+    }
+
+    if (salary <= 0) {
+      return;
+    }
     const newItem = {
       name: name,
       salary: salary,
